@@ -1,0 +1,65 @@
+
+.banner {
+  background-image: url("../../img/bunner.png");
+  min-height: 700px;
+  position: relative;
+
+  @media only screen and (max-width: $X-Small) {
+    min-height: 550px;
+  }
+
+
+  &-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 923px;
+    width: 100%;
+
+    @media only screen and (max-width: $X-Small) {
+      padding: 0 30px;
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    @media only screen and (max-width: $X-Small) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  h1 {
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.80);
+    font-size: 57px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 57px;
+    margin-bottom: 31px;
+
+    @media only screen and (max-width: $Medium) {
+      font-size: 38px;
+      line-height: 38px;
+    }
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+
+  .primary-btn {
+    @include orange-btn;
+  }
+
+  .secondary-btn {
+    @include white-btn;
+  }
+
+}

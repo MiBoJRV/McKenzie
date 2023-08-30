@@ -1,0 +1,41 @@
+//@import "./base/vars";
+
+//mixins
+@mixin button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 30px;
+  border: 1px solid;
+  transition: all .3s;
+  text-align: center;
+}
+
+@mixin white-btn {
+  @include button;
+  background: $white;
+  color: $orange;
+  border-color: $white;
+
+  &:hover {
+    color: $white;
+    background-color: $orange-hover;
+  }
+}
+
+@mixin orange-btn {
+  @include button;
+  background: $orange;
+  color: $white;
+  border-color: $white;
+
+  &:hover {
+    background-color: $orange-hover;
+  }
+}
+
