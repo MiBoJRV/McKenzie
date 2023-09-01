@@ -1,15 +1,14 @@
-
 .banner {
-  background-image: url("../../img/bunner.png");
+  background-image: url("./../img/banner.png");
   min-height: 700px;
   position: relative;
 
-  @media only screen and (max-width: $X-Small) {
+  @media only screen and (max-width: $x-small) {
     min-height: 550px;
   }
 
 
-  &-content {
+  &__content {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -17,17 +16,17 @@
     max-width: 923px;
     width: 100%;
 
-    @media only screen and (max-width: $X-Small) {
+    @media only screen and (max-width: $x-small) {
       padding: 0 30px;
     }
   }
 
-  &-buttons {
+  &__buttons {
     display: flex;
     gap: 20px;
     justify-content: center;
 
-    @media only screen and (max-width: $X-Small) {
+    @media only screen and (max-width: $x-small) {
       flex-direction: column;
       align-items: center;
     }
@@ -43,7 +42,7 @@
     line-height: 57px;
     margin-bottom: 31px;
 
-    @media only screen and (max-width: $Medium) {
+    @media only screen and (max-width: $medium) {
       font-size: 38px;
       line-height: 38px;
     }
@@ -55,11 +54,17 @@
 
 
   .primary-btn {
-    @include orange-btn;
+    @include blue-btn;
   }
 
   .secondary-btn {
     @include white-btn;
   }
 
+}
+
+@supports (-webkit-appearance:none) {
+  .banner {
+    background-image: url("./../img/banner.webp");
+  }
 }
